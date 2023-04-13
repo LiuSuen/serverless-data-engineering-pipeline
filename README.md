@@ -7,23 +7,20 @@ In this project, I will learn to build a serverless data engineering pipeline.
 ## Structure Diagram
 ![55354483-bae7af80-547a-11e9-9909-a5621251065b](https://user-images.githubusercontent.com/84234596/228644401-a6a3406a-af7c-4504-a3e3-38293c3272c7.png)
 ## Step
-**1. Create a table in DynamoDB**
+### 1. Create a table in DynamoDB
 - DynamoDB: A fast and flexible NoSQL database service for any scale
 - Table: lambda-dynamodb-stream
 - partition key: id(String)  
-
-**2. Create lambda functions and add trigger**
+### 2. Create lambda functions and add trigger
 - AWS lambda
 - Function1: ProcessDynamoDBRecords
   - add trigger, remember to add the DynamoDB permission for this IAM role
 <img width="826" alt="截屏2023-04-12 21 01 12" src="https://user-images.githubusercontent.com/84234596/231618907-d267d7d4-fd42-4dfc-84b3-aafcfdac9a46.png">
-- Function2: updateTable  
-
-**3. Setup an Amazon EventBridge schedule**  
+- Function2: updateTable. 
+### 3. Setup an Amazon EventBridge schedule*  
 - choose API: AWS Lambda and `invoke`  
 - to invoke the `updateTable` lambda function every 60 seconds  
-
-**4. Result**  
+### 4. Result
 - The EventBridge will invoke the `updateTable` function every minute, and it will insert a new item in the table in the DynamoDB;  
 - The `ProcessDynamoDBRecords` will detect the change of DynamoDB database, and it will write the result to S3 bucket.  
 ## Week 9 progress
