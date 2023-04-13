@@ -15,7 +15,6 @@ In this project, I will learn to build a serverless data engineering pipeline.
 - AWS lambda
 - Function1: ProcessDynamoDBRecords
   - add trigger, remember to add the DynamoDB permission for this IAM role
-<img width="826" alt="截屏2023-04-12 21 01 12" src="https://user-images.githubusercontent.com/84234596/231618907-d267d7d4-fd42-4dfc-84b3-aafcfdac9a46.png">
 - Function2: updateTable. 
 ### 3. Setup an Amazon EventBridge schedule*  
 - choose API: AWS Lambda and `invoke`  
