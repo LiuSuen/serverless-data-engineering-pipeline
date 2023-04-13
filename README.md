@@ -4,10 +4,19 @@
 - Enhance the project by extending the functionality of the NLP analysis: adding entity extraction, key phrase extraction, or some other NLP feature or doing Applied Computer Vision.
 ## Introduction
 In this project, I will learn to build a serverless data engineering pipeline.
-## Week 9 progress
-**1.Structure Diagram**
+## Structure Diagram
 ![55354483-bae7af80-547a-11e9-9909-a5621251065b](https://user-images.githubusercontent.com/84234596/228644401-a6a3406a-af7c-4504-a3e3-38293c3272c7.png)
-**2.AWS lambda**
+## Step
+**1. Create a table in DynamoDB**
+- DynamoDB: A fast and flexible NoSQL database service for any scale
+- Table name: lambda-dynamodb-stream
+- partition key: id(String)
+**2. Create a lambda function and add trigger**
+- AWS lambda
+- add trigger, remember to add the DynamoDB permission for this IAM role
+**3. Create a table in DynamoDB**
+## Week 9 progress
+**1.AWS lambda**
 - https://github.com/noahgift/awslambda
 ## Week 10 progress
 CloudWatch Timer: schedule a 30-second job to code the lambda function;  
