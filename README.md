@@ -13,11 +13,16 @@ In this project, I will learn to build a serverless data engineering pipeline.
 - partition key: id(String)  
 **2. Create lambda functions and add trigger**
 - AWS lambda
-- Function1:ProcessDynamoDBRecords
+- Function1: ProcessDynamoDBRecords
   - add trigger, remember to add the DynamoDB permission for this IAM role
 <img width="826" alt="截屏2023-04-12 21 01 12" src="https://user-images.githubusercontent.com/84234596/231618907-d267d7d4-fd42-4dfc-84b3-aafcfdac9a46.png">
-- Function2: updateTable
-**3. Create a table in DynamoDB**
+- Function2: updateTable  
+**3. Setup an Amazon EventBridge schedule**
+- choose API: AWS Lambda and `invoke`
+- to invoke the `updateTable` lambda function every 60 seconds
+**4. Result**
+- The EventBridge will invoke the `updateTable` function every minute, and it will insert a new item in the table in the DynamoDB;
+- The `ProcessDynamoDBRecords` will detect the change of DynamoDB database, and it will write the result to S3 bucket.
 ## Week 9 progress
 **1.AWS lambda**
 - https://github.com/noahgift/awslambda
