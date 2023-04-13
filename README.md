@@ -9,11 +9,14 @@ In this project, I will learn to build a serverless data engineering pipeline.
 ## Step
 **1. Create a table in DynamoDB**
 - DynamoDB: A fast and flexible NoSQL database service for any scale
-- Table name: lambda-dynamodb-stream
-- partition key: id(String)
-**2. Create a lambda function and add trigger**
+- Table: lambda-dynamodb-stream
+- partition key: id(String)  
+**2. Create lambda functions and add trigger**
 - AWS lambda
-- add trigger, remember to add the DynamoDB permission for this IAM role
+- Function1:ProcessDynamoDBRecords
+  - add trigger, remember to add the DynamoDB permission for this IAM role
+<img width="826" alt="截屏2023-04-12 21 01 12" src="https://user-images.githubusercontent.com/84234596/231618907-d267d7d4-fd42-4dfc-84b3-aafcfdac9a46.png">
+- Function2: updateTable
 **3. Create a table in DynamoDB**
 ## Week 9 progress
 **1.AWS lambda**
